@@ -1,0 +1,151 @@
+doctype html
+head
+  title Coffee - Free Bootstrap 4 Template by Colorlib
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel='shortcut icon' type='image/x-icon' href='/images/coffee-6-128.ico')
+  link(href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet')
+  link(rel='stylesheet' href='/theme/css/open-iconic-bootstrap.min.css')
+  link(rel='stylesheet' href='/theme/css/animate.css')
+  link(rel='stylesheet' href='/theme/css/owl.carousel.min.css')
+  link(rel='stylesheet' href='/theme/css/owl.theme.default.min.css')
+  link(rel='stylesheet' href='/theme/css/aos.css')
+  link(rel='stylesheet' href='/theme/css/ionicons.min.css')
+  link(rel='stylesheet' href='/theme/css/flaticon.css')
+  link(rel='stylesheet' href='/theme/css/icomoon.css')
+  link(rel='stylesheet' href='/theme/css/style.css')
+nav#ftco-navbar.navbar.navbar-expand-lg.navbar-dark.ftco_navbar.bg-dark.ftco-navbar-light
+  .container
+    a.navbar-brand(href='/')
+      | Sell
+      small Water
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#ftco-nav' aria-controls='ftco-nav' aria-expanded='false' aria-label='Toggle navigation')
+      span.oi.oi-menu
+      |  Menu
+    #ftco-nav.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item.active
+          a.nav-link(href='/') Home
+        li.nav-item
+          a.nav-link(href='#') Menu
+        li.nav-item
+          a.nav-link(href='#') Services
+        li.nav-item
+          a.nav-link(href='#') Blog
+        li.nav-item
+          a.nav-link(href='#') About
+        li.nav-item.dropdown
+          a#dropdown04.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Shop
+          .dropdown-menu(aria-labelledby='dropdown04')
+            a.dropdown-item(href='#') Shop
+            a.dropdown-item(href='#') Single Product
+            a.dropdown-item(href='#') Cart
+            a.dropdown-item(href='#') Checkout
+        li.nav-item
+          a.nav-link(href='#') Contact
+        li.nav-item.cart
+          a.nav-link(href='#')
+            span.icon.icon-shopping_cart
+            span.bag.d-flex.justify-content-center.align-items-center
+              small 1
+section.home-slider.owl-carousel
+  .slider-item(style='background-image: url(images/bg_1.jpg);')
+    .overlay
+    .container
+      .row.slider-text.justify-content-center.align-items-center(data-scrollax-parent='true')
+        .col-md-8.col-sm-12.text-center.ftco-animate
+          span.subheading Welcome
+          h1.mb-4 The Best Coffee Testing Experience
+          p.mb-4.mb-md-5
+            | A small river named Duden flows by their place and supplies it with the
+            | necessary regelialia.
+          p
+            a.btn.btn-primary.p-3.px-xl-4.py-xl-3(href='#') Order Now
+            a.btn.btn-white.btn-outline-white.p-3.px-xl-4.py-xl-3(href='#') View Menu
+  .slider-item(style='background-image: url(images/bg_2.jpg);')
+    .overlay
+    .container
+      .row.slider-text.justify-content-center.align-items-center(data-scrollax-parent='true')
+        .col-md-8.col-sm-12.text-center.ftco-animate
+          span.subheading Welcome
+          h1.mb-4 Amazing Taste &amp; Beautiful Place
+          p.mb-4.mb-md-5
+            | A small river named Duden flows by their place and supplies it with the
+            | necessary regelialia.
+          p
+            a.btn.btn-primary.p-3.px-xl-4.py-xl-3(href='#') Order Now
+            a.btn.btn-white.btn-outline-white.p-3.px-xl-4.py-xl-3(href='#') View Menu
+  .slider-item(style='background-image: url(images/bg_3.jpg);')
+    .overlay
+    .container
+      .row.slider-text.justify-content-center.align-items-center(data-scrollax-parent='true')
+        .col-md-8.col-sm-12.text-center.ftco-animate
+          span.subheading Welcome
+          h1.mb-4 Creamy Hot and Ready to Serve
+          p.mb-4.mb-md-5
+            | A small river named Duden flows by their place and supplies it with the
+            | necessary regelialia.
+          p
+            a.btn.btn-primary.p-3.px-xl-4.py-xl-3(href='#') Order Now
+            a.btn.btn-white.btn-outline-white.p-3.px-xl-4.py-xl-3(href='#') View Menu
+section.ftco-section
+  .container
+    .row.justify-content-center.mb-5.pb-3
+      .col-md-7.heading-section.ftco-animate.text-center
+        span.subheading Discover
+        h2.mb-4 Best Coffee Sellers
+        p
+          | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+          | live the blind texts.
+        form(action='' method="GET")
+          .input-group.mb-4.border.rounded-pill.p-1
+            input.form-control.bg-none.border-0(type='search' name="query" value=query placeholder="What're you searching for?" aria-describedby='button-addon3')
+            .input-group-append.border-0
+              button#button-addon3.btn.btn-link.text-success(type='button')
+                i.fa.fa-search
+    .row
+      .col-md-3
+        select#filter.custom-select(value=`sort=${sort}&order=${order}`)
+          | Filter
+          - if('sort=name&order=asc'===`sort=${sort}&order=${order}`)
+            option(value='sort=name&order=asc' selected) Name(A-Z)
+          -else
+            option(value='sort=name&order=desc') Name(A-Z)
+          - if('sort=name&order=desc'===`sort=${sort}&order=${order}`)
+            option(value='sort=name&order=desc' selected) Name(Z-A)
+          -else
+            option(value='sort=name&order=asc') Name(Z-A)
+          - if('sort=price&order=asc'===`sort=${sort}&order=${order}`)
+            option(value='sort=price&order=asc' selected) Price(asc)
+          -else
+            option(value='sort=price&order=asc') Price(asc)
+          - if('sort=price&order=desc'===`sort=${sort}&order=${order}`)
+            option(value='sort=price&order=desc' selected) Price(desc)
+          -else
+            option(value='sort=price&order=desc') Price(desc)
+    .dropdown-divider
+    .row
+      each product in products
+        .col-md-3
+          .menu-entry
+            a.img(href='#', style=`background-image: url("${product.image}");`)
+            .text.text-center.pt-4
+              h3
+                a(href='#')= product.name
+              p= product.desc
+              p.price
+                span= product.price
+              p
+                a.btn.btn-primary.btn-outline-primary(href='#') Add to Cart
+script(src='/theme/js/jquery.min.js')
+script(src='/theme/js/jquery-migrate-3.0.1.min.js')
+script(src='/theme/js/bootstrap.min.js')
+script(src='/theme/js/jquery.waypoints.min.js')
+script(src='/theme/js/jquery.stellar.min.js')
+script(src='/theme/js/owl.carousel.min.js')
+script(src='/theme/js/aos.js')
+script(src='/theme/js/scrollax.min.js')
+script(src='/theme/js/main.js')
+script(src='/theme/js/index.js')
